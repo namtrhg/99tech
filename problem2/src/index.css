@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+select {
+	border-right: 8px solid transparent;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input::placeholder {
+	color: #717a8c;
+	opacity: 1; /* Firefox */
+}
+
+input::-ms-input-placeholder {
+	/* Edge 12 -18 */
+	color: #717a8c;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+/* Shooting Star Animations */
+@keyframes shootingStar {
+	from {
+			top: -50px;
+			left: 120%;
+			opacity: 1;
+	}
+	to {
+			top: 100%;
+			left: -20%;
+			opacity: 0;
+	}
+}
+
+.shooting-star {
+	position: absolute;
+	width: 2px;
+	height: 150px;
+	background: linear-gradient(white, rgba(255, 255, 255, 0));
+	opacity: 0;
+	animation: shootingStar 2s ease-in-out infinite;
+}
+
+/* Random delays and durations for natural effect */
+.star1 { animation-delay: 1s; animation-duration: 2s; }
+.star2 { animation-delay: 3s; animation-duration: 2.5s; }
+.star3 { animation-delay: 4s; animation-duration: 2.1s; }
+.star4 { animation-delay: 2s; animation-duration: 1.8s; }
+.star5 { animation-delay: 5s; animation-duration: 2.3s; }
